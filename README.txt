@@ -1,4 +1,4 @@
-+_-_++_-_++_-_++_-_++_-_++_-_++_-_+ _______LOG_______+_-_++_-_++_-_++_-_++_-_++_-_+
+____________________________________LOG____________________________________
 
 Read data from a file with low level I/O primitives for reading (read() function) .
 oneCount variable counts 1's of input for parity bit checking(ODD/EVEN),.
