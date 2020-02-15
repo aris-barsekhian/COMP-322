@@ -27,8 +27,8 @@ int main(int argc, char*argv[])
 	count = 0;
 	oneCount = 0;
 	bytes=read(filedes,&chr, 1);
-	printf("Original ASCII    Decimal  Parity  T.Error\n");
-	printf("-------- -------- -------- ------- ---------\n");
+	printf("Original ASCII    Decimal  Parity  \n");
+	printf("-------- -------- -------- ------- \n");
 	while (bytes == 1)
 	{
 		if (chr == '0'&&count<8)
@@ -47,9 +47,8 @@ int main(int argc, char*argv[])
 		{
 			numberStr[count++] = 0;
 			count = 0;
-			printf("%8s        %c      %3d  %-5s  %-5s\n", numberStr, (char)(value%128), value % 128,
-		oneCount & 1 ? "ODD" : "EVEN",
-		value > 128 ? "FALSE" : "TRUE");
+			printf("%8s        %c      %3d  %-5s  \n", numberStr, (char)(value%128), value % 128,
+		oneCount & 1 ? "ODD" : "EVEN");
 			value = 0;
 			oneCount = 0;
 		}
@@ -61,9 +60,8 @@ int main(int argc, char*argv[])
 		numberStr[count++] = '0';
 	}
 	numberStr[count++] = 0;
-	printf("%8s        %c      %3d  %-5s  %-5s\n", numberStr, (char)(value%128), value % 128,
-		oneCount & 1 ? "ODD" : "EVEN",
-		value > 128 ? "FALSE" : "TRUE");
+	printf("%8s        %c      %3d  %-5s  \n", numberStr, (char)(value%128), value % 128,
+		oneCount & 1 ? "ODD" : "EVEN");
 	close(filedes);
 	return 0;
 }
