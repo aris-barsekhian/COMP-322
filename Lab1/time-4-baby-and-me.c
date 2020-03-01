@@ -43,6 +43,7 @@ else if(pid==-1){
 	///Reports the abnormal termination of the program.
 	exit(1);
 
-	return 0;
+
 }
+	return 0;
 }
