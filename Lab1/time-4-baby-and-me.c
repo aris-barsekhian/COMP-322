@@ -10,13 +10,13 @@ int main(){
 
 	struct tms tmsValue;
 	clock_t C_Time;
-	pid_t pid;
+	pid_t pid ;
 	pid_t childId;
 	int retval;
     ///Fork a new process
 	pid = fork();
 
-////++++++++++++++++++++++++PID =0 =>> It is the child
+////+++++++++++++++++++++++++PID =0 =>> It is the child
 	if(pid == 0){
     ///Print Id's
 		printf("PPID: %d, PID: %d\n",getppid(),getpid());
