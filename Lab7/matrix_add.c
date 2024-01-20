@@ -93,7 +93,7 @@ int main(int argc, char** argv) {
     block_size = matrix_size / block_number;
     block_size = block_size * 4;
     bytes = block_size * block_size;
-    scalar = rand() % 201;
+scalar = (rand() % 201) - 100; // Adjusting the range to [-100, 100]
     if (scalar <= 100)
         scalar = scalar * -1;
     else if (scalar > 100)
